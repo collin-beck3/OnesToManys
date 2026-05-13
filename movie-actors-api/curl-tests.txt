@@ -1,0 +1,74 @@
+--list all from movies table 
+curl http://localhost:8080/movies 
+
+--list all from actors table 
+curl http://localhost:8080/actors
+
+--list 1 output from movie table 
+curl http://localhost:8080/movies/1
+{"director":"Joss Whedon","durationMinutes":143,"genre":"Action","id":1,"imdbRating":8.0,"rating":"PG-13","releaseYear":2012,"title":"The Avengers"}%  
+
+--list 1 output from actors table 
+curl http://localhost:8080/actors/1
+{"characterName":"Iron Man","firstName":"Robert","gender":"Male","id":1,"lastName":"Downey Jr.","movieId":1}%  
+
+--add movie 
+curl -X POST http://localhost:8080/movies \
+-H "Content-Type: application/json" \
+-d '{
+  "title": "Interstellar",
+  "genre": "Sci-Fi",
+  "releaseYear": 2014,
+  "director": "Christopher Nolan",
+  "rating": "PG-13",
+  "imdbRating": 8.6,
+  "durationMinutes": 169}'
+
+  --update a movie 
+  curl -X PUT http://localhost:8080/movies/1 \
+-H "Content-Type: application/json" \
+-d '{
+  "title": "The Avengers UPDATED",
+  "genre": "Action",
+  "releaseYear": 2012,
+  "director": "Joss Whedon",
+  "rating": "PG-13",
+  "imdbRating": 8.1,
+  "durationMinutes": 143}'
+
+  --delete movie (deleted the last added movie_id = 21) 
+  curl -X DELETE http://localhost:8080/movies/21
+
+  --add actor to movie_id = 1 
+  curl -X POST http://localhost:8080/actors \
+-H "Content-Type: application/json" \
+-d '{
+  "movieId": 1,
+  "firstName": "Jeremy",
+  "lastName": "Renner",
+  "characterName": "Hawkeye",
+  "gender": "Male"}'
+
+  output: {"characterName":"Hawkeye","firstName":"Jeremy","gender":"Male","id":110,"lastName":"Renner","movieId":1}%  
+
+  --show 1 movie with actors attached to listed movie based on movie ID 
+  curl http://localhost:8080/movies/1/actors
+[{"characterName":"Iron Man","firstName":"Robert","gender":"Male","id":1,"lastName":"Downey Jr.","movieId":1},{"characterName":"Captian America","firstName":"Chris","gender":"Male","id":2,"lastName":"Evans","movieId":1},{"characterName":"Hulk","firstName":"Mark","gender":"Male","id":3,"lastName":"Ruffalo","movieId":1},{"characterName":"Thor","firstName":"Chris","gender":"Male","id":4,"lastName":"Hemsworth","movieId":1},{"characterName":"Black Widow","firstName":"Scarlett","gender":"Female","id":5,"lastName":"Johansson","movieId":1},{"characterName":"Hawkeye","firstName":"Jeremy","gender":"Male","id":110,"lastName":"Renner","movieId":1}]%  
+
+--add actor with OneToMany relationship 
+% curl -X POST http://localhost:8080/movies/1/actors \
+-H "Content-Type: application/json" \
+-d '{
+  "firstName": "Tom",   
+  "lastName": "Hiddleston",
+  "characterName": "Loki",   
+  "gender": "Male"
+}'
+
+
+
+
+
+
+
+

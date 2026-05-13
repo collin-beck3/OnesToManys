@@ -17,7 +17,7 @@ CREATE TABLE actors (
     movie_id INTEGER, 
     first_name TEXT NOT NULL,
     last_name TEXT NOT NULL, 
-    chaacter_name TEXT, 
+    character_name TEXT, 
     gender TEXT, 
 
     CONSTRAINT fk_movie FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE

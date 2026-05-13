@@ -1,5 +1,6 @@
 --Insert Movies 
-INSERT INTO movies (title, genre, release_year, director, rating, imdb_rating, duration_minutes) VALUES 
+INSERT INTO movies (title, genre, release_year, director, rating, imdb_rating, duration_minutes) 
+VALUES 
 ('The Avengers', 'Action', 2012, 'Joss Whedon', 'PG-13', 8.0, 143),
 ('Inception', 'Sci-Fi', 2010, 'Christopher Nolan', 'PG-13', 8.8, 148), 
 ('Titanic', 'Romance', 1997, 'James Cameron', 'PG-13', 8.0, 195), 
@@ -22,7 +23,8 @@ INSERT INTO movies (title, genre, release_year, director, rating, imdb_rating, d
 ('Scarface', 'Crime', 1983, 'Brian De Palma', 'R', 8.3, 170);  
 
 --Insert Actors
-INSERT INTO actors (movie_id, first_name, last_name, character_name, gender) VALUES
+INSERT INTO actors (movie_id, first_name, last_name, character_name, gender) 
+VALUES
 (1, 'Robert', 'Downey Jr.', 'Iron Man', 'Male'),
 (1, 'Chris', 'Evans', 'Captian America', 'Male'),
 (1, 'Mark', 'Ruffalo', 'Hulk', 'Male'),
@@ -113,10 +115,10 @@ INSERT INTO actors (movie_id, first_name, last_name, character_name, gender) VAL
 (17, 'Peter', 'Mayhew', 'Chewbacca', 'Male'), 
 (17, 'Frank', 'Oz', 'Yoda(voice)', 'Male'), 
 (17, 'Alec', 'Guinness', 'Obi-Wan Kenobi', 'Male'), 
-(18, 'Michael', 'Fox J.', "Marty McFly", 'Male'), 
+(18, 'Michael', 'Fox J.', 'Marty McFly', 'Male'), 
 (18, 'Christopher', 'Lloyd', 'Dr. Emmett Brown', 'Male'), 
 (18, 'Crispin', 'Glover', 'George McFly', 'Male'), 
-(18, 'Lea', 'Thompson', 'Lorraine Baines', 'Female')
+(18, 'Lea', 'Thompson', 'Lorraine Baines', 'Female'),
 (18, 'Claudia', 'Wells', 'Jennifer Parker', 'Female'), 
 (18, 'Marc', 'McClure', 'Dave McFly', 'Male'), 
 (18, 'Wendie', 'Jo Sperber', 'Linda McFly', 'Female'), 
@@ -130,7 +132,7 @@ INSERT INTO actors (movie_id, first_name, last_name, character_name, gender) VAL
 (20, 'Steven', 'Bauer', 'Manny Ray', 'Male'),
 (20, 'Mary', 'Elizabeth Masstrantonio', 'Gina', 'Female'), 
 (20, 'Miriam', 'Colon', 'Mama Montana', 'Female'),
-(20, 'Paul', 'Shenar', 'Alejandro Sosa', 'Male')
+(20, 'Paul', 'Shenar', 'Alejandro Sosa', 'Male'),
 (20, 'Robert', 'Loggia', 'Frank Lopez', 'Male'); 
 
 
