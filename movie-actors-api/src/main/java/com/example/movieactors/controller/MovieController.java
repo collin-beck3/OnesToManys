@@ -6,7 +6,10 @@ import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*; 
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+
+@CrossOrigin
 @RestController
 public class MovieController {
 
@@ -24,6 +27,11 @@ public class MovieController {
     @GetMapping("/movies/{id}")
     public Movie getMovieById(@PathVariable Long id) {
         return movieRepository.findById(id).orElse(null); 
+    }
+
+    @GetMapping("/dump")
+    public List<Movie> dumpData() { 
+        return movieRepository.findAll(); 
     }
 
     @PostMapping("/movies")

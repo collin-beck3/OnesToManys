@@ -65,7 +65,8 @@ curl -X POST http://localhost:8080/movies \
   "gender": "Male"
 }'
 
-
+-- show all data with OnetoMany relationship working
+% curl http://localhost:8080/dump 
 
 
 

@@ -5,12 +5,14 @@ import com.example.movieactors.repository.ActorRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*; 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.example.movieactors.model.Movie; 
 import com.example.movieactors.repository.MovieRepository; 
 
 
 import java.util.List; 
 
+@CrossOrigin
 @RestController
 public class ActorController {
 
