@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 
-@CrossOrigin
+@CrossOrigin(origins = "*")
 @RestController
 public class MovieController {
 

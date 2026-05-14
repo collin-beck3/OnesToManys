@@ -12,7 +12,7 @@ import com.example.movieactors.repository.MovieRepository;
 
 import java.util.List; 
 
-@CrossOrigin
+@CrossOrigin(origins = "*")
 @RestController
 public class ActorController {
 
