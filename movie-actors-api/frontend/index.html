@@ -4,11 +4,33 @@
     <title>Movies App</title>
 </head>
 <body>
-    <h1>Movies</h1>
+    <hi>Welcome to Popcorn.Movies </hi>
+    <h2>Movies</h2>
+    <h3>Add Movie</h3>
+    <form id="movieForm">
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="genre" placeholder="Genre" required>
+        <input type="number" id="releaseYear" placeholder="Release Year" required> 
+        <input type="text" id="director" placeholder="Director" required>
+        <input type="text" id="rating" placeholder="Rating" required>
+        <input type="number" id="imdbRating" placeholder="IMDb Rating" required>
+        <input type="number" id="durationMinutes" placeholder="Duration (in minutes)" required>
+        <button type="submit">Add Movie</button>
+    </form>
 
     <ul id="movieList"></ul>
 
     <h2>Actors</h2>
+    <h3>Add Actor</h3>
+
+    <form id="actorForm">
+        <input type="number" id="actorMovieId" placeholder="Movie ID" required>
+        <input type="text" id="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" placeholder="Last Name" required>
+        <input type="text" id="characterName" placeholder="Character Name" required>
+        <input type="text" id="gender" placeholder="Gender" required>
+        <button type="submit">Add Actor</button>
+    </form>
     <ul id="actorList"></ul>
 
     <script src="script.js"></script>
